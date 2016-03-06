@@ -80,7 +80,7 @@ c.g.a.g.example.WhateverIntercepted.doWhatever(WhateverIntercepted.java:35)
 ```
 
 ## TODO
-- [ ] Fix codegen for interfaces
+- [x] Fix codegen for interfaces
 - [ ] Implement tests
 - [ ] Release
 
