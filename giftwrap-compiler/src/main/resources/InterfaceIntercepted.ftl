@@ -32,12 +32,13 @@ ${visibility} class ${name} implements ${super} {
         <#list method.annotations as annotation>
         <#assign annotationVar = "$a" + annotation_index >
         <#assign annotationImpl = annotation.type + "DefaultImplementation" >
-        ${annotationImpl} ${annotationVar} = new ${annotationImpl}();
+        ${annotationImpl} ${annotationVar} =
+                new ${annotationImpl}();
         <#list annotation.properties as property>
         ${annotationVar}.${property.name}(${property.value});
         </#list>
         $c = new InterceptorCallable<${annotation.type}>(
-                ${annotation.interceptor}, ${annotationVar}, $c, "${method.name}", this<#list method.parameters as parameter>, ${parameter.name}</#list>);
+                ${annotation.interceptorName}, ${annotationVar}, $c, "${method.name}", this<#list method.parameters as parameter>, ${parameter.name}</#list>);
         </#list>
         try {
             <#if method.returnType??>return (${method.returnType})</#if>$c.call();

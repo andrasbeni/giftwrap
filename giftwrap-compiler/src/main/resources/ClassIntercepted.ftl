@@ -23,7 +23,8 @@ ${visibility} class ${name} extends ${super} {
         Callable<Object> $c = new Callable<Object>() {
             public Object call() throws Exception {
                 <#if method.returnType??>return </#if>${name}.super.${method.name}(<#list method.parameters as parameter>${parameter.name}<#sep>, </#sep></#list>);
-                <#if method.returnType??><#else>return null;</#if>
+                <#if method.returnType??><#else>
+                return null;</#if>
             }
         };
         <#list method.annotations as annotation>
