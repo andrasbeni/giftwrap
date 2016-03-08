@@ -9,7 +9,9 @@ import com.github.andrasbeni.giftwrap.InterceptedBy;
 
 @Retention(RetentionPolicy.SOURCE)
 @Target(ElementType.METHOD)
-@InterceptedBy(TransactionInterceptor.class)
-public @interface Transactional {
+@InterceptedBy(Multiplier.class)
+public @interface Multiplied {
 
+	int value();
+	
 }

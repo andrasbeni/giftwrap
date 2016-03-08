@@ -16,7 +16,7 @@ public class LoggerInterceptor implements Interceptor<Logged> {
 		logger.log(level, "Entering method " + interception.getMethodName());
 		try {
 			Object result = interception.proceed();
-			logger.log(level, "Returning from method " + interception.getMethodName());
+			logger.log(level, "Returning " + result + " from method " + interception.getMethodName());
 			return result;
 		} catch (Exception e) {
 			logger.log(level, "Throwing from method " + interception.getMethodName());

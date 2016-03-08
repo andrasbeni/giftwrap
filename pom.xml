@@ -12,6 +12,7 @@
   <modules>
     <module>giftwrap-runtime</module>
     <module>giftwrap-compiler</module>
+	<module>giftwrap-example</module>
   </modules>  
 
   <properties>
