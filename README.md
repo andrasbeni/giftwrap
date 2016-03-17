@@ -1,17 +1,10 @@
 # giftwrap
 
+[![Build Status](https://travis-ci.org/andrasbeni/giftwrap.svg?branch=master)](https://travis-ci.org/andrasbeni/giftwrap)
+
 A [Dagger 2](http://google.github.io/dagger/) inspired wrapper generator library
 
-## Overview
-
-giftwrap generates decorator classes at compile-time. 
-
-## Benefits
-
- * Faster startup
- * Readable decorator class names
- * Readable decorator classes
- 
+giftwrap generates decorator classes at compile-time
 
 ## Usage
 
@@ -78,11 +71,6 @@ c.g.a.g.example.TransactionInterceptor.intercept(TransactionInterceptor.java:10)
 c.g.a.g.InterceptorCallable.call(InterceptorCallable.java:27)
 c.g.a.g.example.WhateverIntercepted.doWhatever(WhateverIntercepted.java:35)
 ```
-
-## TODO
-- [x] Fix codegen for interfaces
-- [ ] Implement tests
-- [ ] Release
 
 
 
