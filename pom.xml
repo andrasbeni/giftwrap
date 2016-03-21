@@ -1,22 +1,59 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.github.andrasbeni</groupId>
   <artifactId>giftwrap-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>9</version>
+  </parent>
   <packaging>pom</packaging>
-
   <name>giftwrap</name>
-
-  <modules>
-    <module>giftwrap-runtime</module>
-    <module>giftwrap-compiler</module>
-	<module>giftwrap-example</module>
-  </modules>  
-
+  <description>An annotation processor that creates decorators.</description>
+  <url>https://github.com/andrasbeni/giftwrap</url>
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Andras Beni</name>
+      <organizationUrl>https://github.com/andrasbeni/</organizationUrl>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git@github.com:andrasbeni/giftwrap.git</connection>
+    <developerConnection>scm:git:git@github.com:andrasbeni/giftwrap.git</developerConnection>
+    <url>git@github.com:andrasbeni/giftwrap.git</url>
+  </scm>
+  <profiles>
+    <profile>
+      <id>released</id>
+      <modules>
+        <module>giftwrap-runtime</module>
+        <module>giftwrap-compiler</module>
+      </modules> 
+    </profile>
+    <profile>
+      <id>all</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>giftwrap-runtime</module>
+        <module>giftwrap-example</module>
+        <module>giftwrap-compiler</module>
+      </modules>
+    </profile>
+  </profiles>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -27,5 +64,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
 </project>

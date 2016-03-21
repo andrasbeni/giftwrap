@@ -1,31 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>giftwrap-compiler</artifactId>
-	<parent>
-		<groupId>com.github.andrasbeni</groupId>
-		<artifactId>giftwrap-parent</artifactId>
-		<version>1.0.0</version>
-	</parent>
-	<properties>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.23</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.auto.service</groupId>
-			<artifactId>auto-service</artifactId>
-			<version>1.0-rc2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.andrasbeni</groupId>
-			<artifactId>giftwrap-runtime</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-	</dependencies>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>giftwrap-compiler</artifactId>
+  <parent>
+    <groupId>com.github.andrasbeni</groupId>
+    <artifactId>giftwrap-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <dependencies>
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>2.3.23</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+      <version>1.0-rc2</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>giftwrap-runtime</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
 </project>
